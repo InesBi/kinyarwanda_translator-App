@@ -1,0 +1,68 @@
+pipeline {
+    agent any
+
+    environment {
+        VENV_DIR = 'venv'
+        PYTHON = 'python3'
+    }
+
+    stages {
+        stage('Clone') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Set up Python Env') {
+            steps {
+                sh '''
+                ${PYTHON} -m venv ${VENV_DIR}
+                . ${VENV_DIR}/bin/activate
+                pip install --upgrade pip
+                pip install -r requirements.txt
+                '''
+            }
+        }
+
+        stage('Lint') {
+            steps {
+                sh '''
+                . ${VENV_DIR}/bin/activate
+                pip install flake8
+                flake8 app.py utils/ services/ --count --exit-zero --statistics
+                '''
+            }
+        }
+
+        stage('Run Tests') {
+            when {
+                expression { fileExists('tests') }
+            }
+            steps {
+                sh '''
+                . ${VENV_DIR}/bin/activate
+                pip install pytest
+                pytest tests/
+                '''
+            }
+        }
+
+        stage('Notify (optional)') {
+            steps {
+                echo "Push to GitHub to trigger Streamlit Cloud deployment"
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Pipeline passed! Ready to push to GitHub for deploy.'
+        }
+        failure {
+            echo '❌ Build or tests failed. Check logs.'
+        }
+        always {
+            sh 'rm -rf ${VENV_DIR}'
+        }
+    }
+}
