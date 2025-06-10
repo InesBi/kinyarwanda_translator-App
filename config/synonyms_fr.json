@@ -1,0 +1,46 @@
+{
+  "Général": {
+    "commencer": ["démarrer", "initier"],
+    "aider": ["assister", "soutenir"]
+  },
+  "Médical": {
+    "médecin": ["docteur", "professionnel de santé"],
+    "traitement": ["thérapie", "intervention"],
+    "hôpital": ["clinique", "établissement médical"]
+  },
+  "Éducation": {
+    "étudiant": ["apprenant", "élève"],
+    "enseignant": ["professeur", "instructeur"],
+    "leçon": ["cours", "séance"]
+  },
+  "Agriculture": {
+    "fermier": ["agriculteur", "cultivateur"],
+    "récolte": ["moisson", "production"],
+    "sol": ["terre", "terrain"]
+  },
+  "Affaires": {
+    "entreprise": ["société", "organisation"],
+    "réunion": ["conférence", "discussion"],
+    "profit": ["bénéfice", "gain"]
+  },
+  "Technologie": {
+    "ordinateur": ["machine", "appareil"],
+    "logiciel": ["programme", "application"],
+    "bug": ["erreur", "problème"]
+  },
+  "Religieux": {
+    "prière": ["invocation", "supplication"],
+    "foi": ["croyance", "spiritualité"],
+    "église": ["paroisse", "lieu de culte"]
+  },
+  "Actualités et Médias": {
+    "journaliste": ["reporter", "correspondant"],
+    "article": ["rapport", "publication"],
+    "urgence": ["alerte", "information prioritaire"]
+  },
+  "Gouvernement et Politique": {
+    "ministre": ["responsable", "délégué"],
+    "politique": ["mesure", "directive"],
+    "citoyen": ["habitants", "membres de la communauté"]
+  }
+}

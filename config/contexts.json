@@ -1,0 +1,33 @@
+{
+  "General": {
+    "description": "Standard, neutral language suitable for everyday use."
+  },
+  "Legal": {
+    "description": "Formal legal terminology used in contracts, laws, and official documents."
+  },
+  "Medical": {
+    "description": "Precise and clinical language suitable for medical reports, prescriptions, or health education."
+  },
+  "Education": {
+    "description": "Simplified and instructional language used in textbooks, lessons, or student materials."
+  },
+  "Business": {
+    "description": "Professional and formal language for reports, proposals, or business communication."
+  },
+  "Technology": {
+    "description": "Technical language for user manuals, software documentation, or engineering content."
+  },
+  "Religious": {
+    "description": "Respectful and spiritual language appropriate for scriptures, sermons, or religious education."
+  },
+  "News & Media": {
+    "description": "Journalistic language suitable for news articles, press releases, or public announcements."
+  },
+  "Agriculture": {
+    "description": "Domain-specific terms related to farming, crop science, and rural development."
+  },
+  "Government & Policy": {
+    "description": "Official and bureaucratic language for public services, policies, or administrative documents."
+  }
+}
+

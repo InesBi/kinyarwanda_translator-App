@@ -1,0 +1,51 @@
+{
+  "General": {
+    "help": ["assist", "support"],
+    "start": ["begin", "initiate"]
+  },
+  "Legal": {
+    "contract": ["agreement", "accord"],
+    "law": ["statute", "regulation"],
+    "court": ["tribunal", "judiciary"]
+  },
+  "Medical": {
+    "doctor": ["physician", "medical professional"],
+    "illness": ["disease", "condition"],
+    "treatment": ["therapy", "intervention"]
+  },
+  "Education": {
+    "student": ["learner", "pupil"],
+    "teacher": ["educator", "instructor"],
+    "lesson": ["class", "session"]
+  },
+  "Business": {
+    "profit": ["revenue", "gain"],
+    "meeting": ["conference", "discussion"],
+    "company": ["enterprise", "firm"]
+  },
+  "Technology": {
+    "computer": ["machine", "device"],
+    "software": ["program", "application"],
+    "bug": ["error", "glitch"]
+  },
+  "Religious": {
+    "prayer": ["supplication", "invocation"],
+    "church": ["congregation", "chapel"],
+    "faith": ["belief", "spirituality"]
+  },
+  "News & Media": {
+    "report": ["article", "coverage"],
+    "journalist": ["reporter", "correspondent"],
+    "breaking": ["urgent", "developing"]
+  },
+  "Agriculture": {
+    "farm": ["plantation", "agricultural land"],
+    "crop": ["harvest", "produce"],
+    "soil": ["earth", "ground"]
+  },
+  "Government & Policy": {
+    "policy": ["regulation", "measure"],
+    "minister": ["official", "representative"],
+    "public": ["citizen", "community"]
+  }
+}

@@ -3,6 +3,4 @@ __pycache__/
 *.pyc
 *.log
 *.DS_Store
-config/contexts.json
-config/synonyms_*.json
 venv/
