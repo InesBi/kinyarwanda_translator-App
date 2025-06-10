@@ -1,0 +1,10 @@
+streamlit>=1.25
+openai>=1.0.0
+python-docx>=0.8.11
+fpdf>=1.7.2
+requests>=2.31.0
+langdetect>=1.0.9
+google-cloud-translate==2.0.1
+python-dotenv>=1.0.0
+transformers>=4.40.0
+torch>=2.0.0
