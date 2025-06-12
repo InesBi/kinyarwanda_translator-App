@@ -62,8 +62,8 @@ with open("config/contexts.json") as f:
 # Sidebar controls
 provider = st.sidebar.selectbox("Choose Translation Provider", ["OpenAI", "Google", "Hugging Face"])
 api_key = st.sidebar.text_input(f"Enter your {provider} API Key", type="password", key="api_key_input")
-src_lang = st.sidebar.selectbox("Translate from", ["Kinyarwanda"])
-tgt_lang = st.sidebar.selectbox("Translate to", ["English", "French"])
+src_lang = st.sidebar.selectbox("Translate from", ["Kinyarwanda", "English", "French"])
+tgt_lang = st.sidebar.selectbox("Translate to", ["English", "French", "Kinyarwanda"])
 context = st.sidebar.selectbox("Select Context", list(contexts.keys()))
 export_format = st.sidebar.radio("Export format", ["Word (.docx)", "PDF (.pdf)"])
 
