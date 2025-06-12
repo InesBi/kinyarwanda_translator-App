@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 import tempfile
+import time
 from docx import Document
 from fpdf import FPDF
 from utils.file_handler import handle_file_upload
@@ -56,8 +57,12 @@ with col2:
     )
 
 # Load context
-with open("config/contexts.json") as f:
-    contexts = json.load(f)
+try:
+    with open("config/contexts.json") as f:
+        contexts = json.load(f)
+except FileNotFoundError:
+    st.error("Missing config/contexts.json file.")
+    st.stop()
 
 # Sidebar controls
 provider = st.sidebar.selectbox("Choose Translation Provider", ["OpenAI", "Google", "Hugging Face"])
@@ -79,12 +84,15 @@ else:
 
 # Translate
 if st.button("Translate"):
+    if not api_key:
+        st.error("Please enter your API key before translating.")
+        st.stop()
     if input_text.strip() == "":
         st.warning("Please provide some input text.")
     else:
         with st.spinner("Translating..."):
             try:
-                # Choose translation provider dynamically
+                start = time.time()
                 if provider == "OpenAI":
                     translated_text = translate_with_openai(input_text, src_lang, tgt_lang, api_key, context)
                 elif provider == "Google":
@@ -93,9 +101,12 @@ if st.button("Translate"):
                     translated_text = translate_with_huggingface(input_text, src_lang, tgt_lang, api_key, context)
                 else:
                     raise ValueError("Unsupported translation provider")
+                end = time.time()
 
                 enriched_text = suggest_synonyms(translated_text, context)
                 edited_text = st.text_area("Translated Text (Review & Edit)", value=enriched_text, height=300)
+
+                st.info(f"Translated in {end - start:.2f} seconds")
 
                 if export_format == "Word (.docx)":
                     doc = Document()
@@ -115,7 +126,8 @@ if st.button("Translate"):
                 elif export_format == "PDF (.pdf)":
                     pdf = FPDF()
                     pdf.add_page()
-                    pdf.set_font("Arial", size=12)
+                    pdf.add_font("DejaVu", "", "DejaVuSans.ttf", uni=True)
+                    pdf.set_font("DejaVu", "", 12)
                     for line in edited_text.split('\n'):
                         cleaned_line = clean_text_for_pdf(line)
                         pdf.multi_cell(0, 10, cleaned_line)
