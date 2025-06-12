@@ -3,19 +3,13 @@
 A powerful multilingual translation tool focused on Kinyarwanda, English, and French — built with **Streamlit** and integrated with top translation APIs including **OpenAI**, **Google Translate**, and **Hugging Face**. It supports both manual text input and document uploads, offering editable output, context-aware synonym suggestions, and export to PDF or Word.
 
  # Example Usage
-   Launch the app
-   
-   Choose your input language and target language
-   
-   Select a translation provider
-   
-   Choose a domain/context (e.g., Legal, Medical)
-   
-   Enter text or upload a document
-   
-   Review/edit the translated output
-   
-   Click Download as PDF or DOCX
+   - Launch the app
+   - Choose your input language and target language
+   - Select a translation provider
+   - Choose a domain/context (e.g., Legal, Medical)
+   - Enter text or upload a document
+   - Review/edit the translated output
+   - Click Download as PDF or DOCX
 
 # Notes
 For best Kinyarwanda performance, use OpenAI GPT-4 or custom-trained Hugging Face models
