@@ -3,6 +3,7 @@
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20App-brightgreen?logo=streamlit)](https://your-streamlit-url.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 A powerful multilingual translation tool focused on Kinyarwanda, English, and French, built with **Streamlit** and integrated with top translation APIs including **OpenAI**, **Google Translate**, and **Hugging Face**. It supports both manual text input and document uploads, offering editable output, context-aware synonym suggestions, and export to PDF or Word.
 
  # Example Usage
